@@ -2,7 +2,16 @@
 title: 'Implementing reproducibility in phonetic research: a computational workflow'
 author: "Stefano Coretta"
 date: "26/03/2017"
-output: beamer_presentation
+output: 
+  beamer_presentation: 
+    citation_package: natbib
+    colortheme: orchid
+    fonttheme: professionalfonts
+    highlight: tango
+    latex_engine: xelatex
+    theme: Berkeley
+bibliography: linguistics.bib
+biblio-style: unified.bst
 ---
 
 ```{r setup, include=FALSE}
@@ -11,3 +20,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Reproducible research
 
+[figure reproducible]
+
+## Reproducible research
+
+![](replicability.pdf)
+
+## Why should we care?
+
+The problem [@sandve2013]:
+
+- difficulty of reproduction
+- difficulty of replication
+- retracted papers
+
+The solution:
+
+- Reproducible Research
+
+## A case from linguistics
+
+@weigel2002, @blevins2004a
+
+## Reproducible Research in linguistics
