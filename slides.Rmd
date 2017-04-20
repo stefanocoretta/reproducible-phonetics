@@ -10,12 +10,19 @@ output:
     highlight: tango
     latex_engine: xelatex
     theme: Berkeley
+    fig_caption: false
 bibliography: linguistics.bib
 biblio-style: unified.bst
+indent: true
+header-includes:
+- \frenchspacing
+- \setcitestyle{aysep={},notesep={:},citesep={,}}
+- \urlstyle{tt}
+- \usepackage{graphicx}
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.cap="", fig.path = "figures/")
 ```
 
 ## Reproducible research
@@ -36,10 +43,18 @@ The problem [@sandve2013]:
 
 The solution:
 
-- Reproducible Research
+- Reproducible Research (RR)
 
 ## A case from linguistics
 
-@weigel2002, @blevins2004a
+The "Yokuts vowels" case [@weigel2002]:
+
+- about **75%** of the data is contrieved [@weigel2005, 149]
+- some of the generalisations are **wrong** [@blevins2004a]
 
 ## Reproducible Research in linguistics
+
+- linked data [@bird2003; @thieberger2004]
+- computational grammar [@maxwell2005]
+- `glossbox` [@mcdonnell2017]
+- RR in the Speech Sciences [@abari2012]
