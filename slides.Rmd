@@ -16,24 +16,27 @@ biblio-style: unified.bst
 indent: true
 header-includes:
 - \frenchspacing
-- \setcitestyle{aysep={},notesep={:},citesep={,}}
 - \urlstyle{tt}
 - \usepackage{graphicx}
+- \setcitestyle{aysep={},notesep={:},citesep={,}}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.cap="", fig.path = "figures/")
+devtools::load_all("../speakr")
+library(tidyverse)
+theme_set(theme_light())
 ```
 
-## Reproducible research
+# Reproducible research
 
 [figure reproducible]
 
-## Reproducible research
+# Reproducible research
 
-![](replicability.pdf)
+![](figures/replicability.pdf)
 
-## Why should we care?
+# Why should we care?
 
 The problem [@sandve2013]:
 
@@ -45,16 +48,67 @@ The solution:
 
 - Reproducible Research (RR)
 
-## A case from linguistics
+# A case from linguistics
 
 The "Yokuts vowels" case [@weigel2002]:
 
 - about **75%** of the data is contrieved [@weigel2005, 149]
 - some of the generalisations are **wrong** [@blevins2004a]
 
-## Reproducible Research in linguistics
+# Reproducible Research in linguistics
 
 - linked data [@bird2003; @thieberger2004]
 - computational grammar [@maxwell2005]
 - `glossbox` [@mcdonnell2017]
 - RR in the Speech Sciences [@abari2012]
+
+# RR in phonetics: the workflow
+
+- 
+
+# Phase A: source code and documentation
+
+Praat scripting:
+
+- Atom editor (syntax highlighting)
+- Literate Markdown
+    - tangle: `lmt`
+    - weaving: `pandoc`
+
+# Phase B: the `speakr` package
+
+An `R` package to aid phoneticians who use Praat:
+
+- tangle and run Praat scripts from within `R`
+
+# Phase B: the `speakr` package
+
+```{r, echo=TRUE, eval=FALSE}
+lmt("code/get-measurements.praat.md")
+praatRun("code/get-measurements.praat")
+vowels <- read_csv("results/vowels.csv") %>%
+    mutate_if(is.character, as.factor) %>%
+    mutate(vowel = factor(vowel, c("i", "e", "a",
+                                   "O", "u")))
+```
+
+# Phase B: the `speakr` package
+
+```{r, include=FALSE}
+lmt("code/get-measurements.praat.md")
+praatRun("code/get-measurements.praat")
+vowels <- read_csv("results/vowels.csv") %>%
+    mutate_if(is.character, as.factor) %>%
+    mutate(vowel = factor(vowel, c("i", "e", "a", "O", "u")))
+```
+
+```{r vowel-plot, fig.align="center"}
+vowels %>%
+    ggplot(aes(F2, F1, colour = vowel)) +
+    geom_point() +
+    scale_x_reverse(position = "top") +
+    scale_y_reverse(position = "right") +
+    stat_ellipse() +
+    labs(title = "Vowel plot of one speaker of Italian", x = "F2 (Hertz)", y = "F1 (Hertz)")
+```
+
