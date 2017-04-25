@@ -43,7 +43,8 @@ for interval to intervals - 1
         wordInterval = Get interval at time: 2, start
         word$ = Get label of interval: 2, wordInterval
 
-        resultLine$ = "'word$','vowel$','duration','f1','f2','f1Bark','f2Bark'"
+        resultLine$ = "'word$','vowel$','duration','f1','f2',
+            ...'f1Bark','f2Bark'"
         appendFileLine: resultFile$, resultLine$
     endif
 endfor

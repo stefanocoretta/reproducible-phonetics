@@ -22,7 +22,7 @@ header-includes:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.cap="", fig.path = "figures/")
+knitr::opts_chunk$set(echo = FALSE, fig.cap="", fig.path = "figures/", fig.align = "center")
 devtools::load_all("../speakr")
 library(tidyverse)
 theme_set(theme_light())
@@ -70,22 +70,42 @@ The "Yokuts vowels" case [@weigel2002]:
 
 Praat scripting:
 
-- Atom editor (syntax highlighting)
+- Atom editor (for syntax highlighting and snippets)
 - Literate Markdown
     - tangle: `lmt`
     - weaving: `pandoc`
 
+# Atom
+
+![](figures/atom.png)
+
+# `lmt`
+
+[figure]
+
+# `pandoc`
+
+[figure]
+
 # Phase B: the `speakr` package
 
-An `R` package to aid phoneticians who use Praat:
+`speakr` is an `R` package to aid Praat users:
 
-- tangle and run Praat scripts from within `R`
+- aim: tangle and run Praat scripts from within `R`
+- two main functions
+    - `lmt()`: tangle a Praat script
+    - `praatRun()`: run a Praat script
 
 # Phase B: the `speakr` package
 
 ```{r, echo=TRUE, eval=FALSE}
+# Tangle a Praat script
 lmt("code/get-measurements.praat.md")
+
+# Run the script
 praatRun("code/get-measurements.praat")
+
+# Read the results of the script
 vowels <- read_csv("results/vowels.csv") %>%
     mutate_if(is.character, as.factor) %>%
     mutate(vowel = factor(vowel, c("i", "e", "a",
