@@ -132,3 +132,7 @@ vowels %>%
     labs(title = "Vowel plot of one speaker of Italian", x = "F2 (Hertz)", y = "F1 (Hertz)")
 ```
 
+# Phase C: dissemination
+
+- GitHub
+- Open Science Framework
