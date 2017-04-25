@@ -30,7 +30,7 @@ theme_set(theme_light())
 
 # Reproducible research
 
-[figure reproducible]
+![](figures/reproducible.pdf)
 
 # Reproducible research
 
