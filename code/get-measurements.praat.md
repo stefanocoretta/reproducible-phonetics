@@ -1,14 +1,19 @@
 
 # Measurements extraction script
 
-## get-measurements.praat
+This script extracts the formant values (in Hertz and Bark) and the duration of vowels from the file `sc.wav`.
+
+#### get-measurements.praat
 ```praat
 <<<read files>>>
 
 <<<measurements loop>>>
 ```
 
-## "read files"
+The sound and TextGrid files are read, and the result file is initialised.
+A Formant object is also created from the sound file.
+
+#### "read files"
 ```praat
 sound = Read from file: "../data/sc.wav"
 formant = To Formant (burg): 0, 5, 5000, 0.025, 50
@@ -23,7 +28,11 @@ selectObject: textgrid
 intervals = Get number of intervals: 1
 ```
 
-## "measurements loop"
+The following code is the main loop with extracts the measurements.
+For each vowel, as indicated in the TextGrid, the start and end time of the interval are used to calculate duration and extract formant values from the Formant object.
+The measurements are saved in `vowels.csv`.
+
+#### "measurements loop"
 ```praat
 for interval to intervals - 1
     label$ = Get label of interval: 1, interval
