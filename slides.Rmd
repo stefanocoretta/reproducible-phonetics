@@ -30,41 +30,45 @@ theme_set(theme_light())
 
 # Reproducible research
 
-![](figures/reproducible.pdf)
+\centering
+\includegraphics[width = \textwidth]{figures/reproducible.pdf}
 
+<!--
 # Reproducible research
 
 ![](figures/replicability.pdf)
+-->
 
 # Why should we care?
 
-The problem [@sandve2013]:
+The \textcolor{red}{\textbf{problem}} [@sandve2013]:
 
 - difficulty of reproduction
 - difficulty of replication
 - retracted papers
-
-The solution:
-
-- Reproducible Research (RR)
-
-# A case from linguistics
 
 The "Yokuts vowels" case [@weigel2002]:
 
 - about **75%** of the data is contrieved [@weigel2005, 149]
 - some of the generalisations are **wrong** [@blevins2004a]
 
+The \textcolor{green}{\textbf{solution}}:
+
+- **Reproducible Research** (RR)
+
 # Reproducible Research in linguistics
 
 - linked data [@bird2003; @thieberger2004]
 - computational grammar [@maxwell2005]
-- `glossbox` [@mcdonnell2017]
 - RR in the Speech Sciences [@abari2012]
+    - lack of scientific culture
+    - inefficiency of infrastucture
 
-# RR in phonetics: the workflow
+# The workflow of phonetic research
 
-- 
+- **Phase A**: scripting (Praat)
+- **Phase B**: results and analysis
+- **Phase C**: disseminasion
 
 # Phase A: source code and documentation
 
@@ -77,15 +81,18 @@ Praat scripting:
 
 # Atom
 
-![](figures/atom.png)
+\centering
+\includegraphics[width = \textwidth]{figures/atom.png}
 
 # `lmt`
 
-[figure]
+\centering
+\includegraphics[width = \textwidth]{figures/lmt.png}
 
 # `pandoc`
 
-[figure]
+\centering
+\includegraphics[width = \textwidth]{figures/pandoc.png}
 
 # Phase B: the `speakr` package
 
@@ -122,7 +129,7 @@ vowels <- read_csv("results/vowels.csv") %>%
     mutate(vowel = factor(vowel, c("i", "e", "a", "O", "u")))
 ```
 
-```{r vowel-plot, fig.align="center"}
+```{r vowel-plot, out.width="\\textwidth"}
 vowels %>%
     ggplot(aes(F2, F1, colour = vowel)) +
     geom_point() +
