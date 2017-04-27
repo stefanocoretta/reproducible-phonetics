@@ -35,13 +35,7 @@ theme_set(theme_light())
 
 # Reproducible research
 
-computational environment *+*
-
-steps to reproduce the results *+*
-
-results *=*
-
-**Reproducible Research**
+A piece of research is **reproducible** when, along with its *results*, the *data* and the *computational environment* that produced those results are made available to other researchers [@fomel2009].
 
 # Reproducible research
 
@@ -83,7 +77,7 @@ The \textcolor{green}{\textbf{solution}}:
 
 # The workflow of phonetic research
 
-- **Phase A**: scripting (Praat)
+- **Phase A**: scripting (Praat, @boersma2016)
 
 - **Phase B**: results and analysis
 
@@ -117,7 +111,7 @@ Praat scripting:
 
 # Phase B: the `speakr` package
 
-`speakr` is an `R` package to aid Praat users (under development):
+`speakr` is an `R` [@r-core-team2015] package to aid Praat users (under development):
 
 - aim: tangle and run Praat scripts from within `R`
 - two main functions
@@ -174,11 +168,11 @@ vowels %>%
 
 # Summary
 
-- what is RR
+- share data, source file(s), versioning
 
-- RR in linguistics
+- increasing awareness of RR in linguistics
 
-- computational workflow for phonetic RR
+- Atom, `lmt`, `pandoc`, `speakr`, `knitr`
 
 - this presentation (along with source code and data) is available at \url{https://github.com/stefanocoretta/reproducible-phonetics}
 
