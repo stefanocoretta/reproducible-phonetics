@@ -89,7 +89,7 @@ Praat scripting:
 
 - Atom editor (\url{https://atom.io})
     - syntax highlighting
-    - snippets
+    - autocompletion and snippets
 - Literate Markdown 
     - tangle: `lmt` (\url{https://github.com/driusan/lmt})
     - weaving: `pandoc` (\url{http://pandoc.org})
@@ -176,5 +176,9 @@ vowels %>%
 
 - this presentation (along with source code and data) is available at \url{https://github.com/stefanocoretta/reproducible-phonetics}
 
+# Summary
+
+\centering \Large
+THANK YOU!
 
 # References
