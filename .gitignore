@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+*.Rproj
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
