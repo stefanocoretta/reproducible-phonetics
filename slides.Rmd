@@ -180,7 +180,7 @@ vowels %>%
 
 - computational workflow for phonetic RR
 
-- this presentation (along with source code and data) is available at \url{}
+- this presentation (along with source code and data) is available at \url{https://github.com/stefanocoretta/reproducible-phonetics}
 
 
 # References
