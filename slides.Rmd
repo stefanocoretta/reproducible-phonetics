@@ -1,15 +1,19 @@
 ---
 title: 'Implementing reproducibility in phonetic research: a computational workflow'
-author: "Stefano Coretta"
-date: "26/03/2017"
+author: |
+    | Stefano Coretta
+    | *University of Manchester*
+date: |
+    | **mFiL 2017**
+    | 28 April 2017
 output: 
   beamer_presentation: 
     citation_package: natbib
-    colortheme: orchid
+    colortheme: spruce
     fonttheme: professionalfonts
     highlight: tango
     latex_engine: xelatex
-    theme: Berkeley
+    theme: Rochester
     fig_caption: false
 bibliography: linguistics.bib
 biblio-style: unified.bst
@@ -69,8 +73,10 @@ The \textcolor{green}{\textbf{solution}}:
 
 # Reproducible Research in linguistics
 
-- linked data [@bird2003; @thieberger2004]
-- computational grammar [@maxwell2005]
+- **linked data** [@bird2003; @thieberger2004]
+
+- **computational grammar** [@maxwell2005]
+
 - RR in the Speech Sciences [@abari2012]
     - lack of scientific culture
     - inefficiency of infrastructure
@@ -78,7 +84,9 @@ The \textcolor{green}{\textbf{solution}}:
 # The workflow of phonetic research
 
 - **Phase A**: scripting (Praat)
+
 - **Phase B**: results and analysis
+
 - **Phase C**: dissemination
 
 # Phase A: source code and documentation
@@ -105,7 +113,7 @@ Praat scripting:
 # `pandoc` (universal document converter)
 
 \centering
-\includegraphics[width = \textwidth]{figures/pandoc.png}
+\includegraphics[height = \textheight]{figures/pandoc.png}
 
 # Phase B: the `speakr` package
 
@@ -154,11 +162,14 @@ vowels %>%
 
 # Phase C: dissemination
 
-- GitHub: \url{https://github.com}
-    - versioning system `git`
+- `knitr` [@xie2014]
+    - dynamic reports
+    - reproducible documents
+
+- GitHub (\url{https://github.com})
+    - versioning system (`git`)
     - online repository
-- Open Science Framework: \url{https://osf.io}
+- Open Science Framework (\url{https://osf.io})
     - online repository (for data)
 
 # Summary
-
