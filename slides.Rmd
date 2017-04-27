@@ -173,3 +173,14 @@ vowels %>%
     - online repository (for data)
 
 # Summary
+
+- what is RR
+
+- RR in linguistics
+
+- computational workflow for phonetic RR
+
+- this presentation (along with source code and data) is available at \url{}
+
+
+# References
