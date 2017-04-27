@@ -174,7 +174,7 @@ vowels %>%
 
 # Summary
 
-- what is RR
+- code, data, results = RR
 
 - RR in linguistics
 
