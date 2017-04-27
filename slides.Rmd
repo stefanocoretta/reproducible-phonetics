@@ -15,6 +15,7 @@ bibliography: linguistics.bib
 biblio-style: unified.bst
 indent: true
 header-includes:
+
 - \frenchspacing
 - \urlstyle{tt}
 - \usepackage{graphicx}
@@ -30,8 +31,18 @@ theme_set(theme_light())
 
 # Reproducible research
 
+computational environment *+*
+
+steps to reproduce the results *+*
+
+results *=*
+
+**Reproducible Research**
+
+# Reproducible research
+
 \centering
-\includegraphics[width = \textwidth]{figures/reproducible.pdf}
+\includegraphics[height = \textheight]{figures/reproducible.pdf}
 
 <!--
 # Reproducible research
@@ -45,11 +56,11 @@ The \textcolor{red}{\textbf{problem}} [@sandve2013]:
 
 - difficulty of reproduction
 - difficulty of replication
-- retracted papers
+- retracted papers (\url{http://retractionwatch.com})
 
 The "Yokuts vowels" case [@weigel2002]:
 
-- about **75%** of the data is contrieved [@weigel2005, 149]
+- about **75%** of the data is contrived [@weigel2005, 149]
 - some of the generalisations are **wrong** [@blevins2004a]
 
 The \textcolor{green}{\textbf{solution}}:
@@ -62,41 +73,43 @@ The \textcolor{green}{\textbf{solution}}:
 - computational grammar [@maxwell2005]
 - RR in the Speech Sciences [@abari2012]
     - lack of scientific culture
-    - inefficiency of infrastucture
+    - inefficiency of infrastructure
 
 # The workflow of phonetic research
 
 - **Phase A**: scripting (Praat)
 - **Phase B**: results and analysis
-- **Phase C**: disseminasion
+- **Phase C**: dissemination
 
 # Phase A: source code and documentation
 
 Praat scripting:
 
-- Atom editor (for syntax highlighting and snippets)
-- Literate Markdown
-    - tangle: `lmt`
-    - weaving: `pandoc`
+- Atom editor (\url{https://atom.io})
+    - syntax highlighting
+    - snippets
+- Literate Markdown 
+    - tangle: `lmt` (\url{https://github.com/driusan/lmt})
+    - weaving: `pandoc` (\url{http://pandoc.org})
 
 # Atom
 
 \centering
 \includegraphics[width = \textwidth]{figures/atom.png}
 
-# `lmt`
+# `lmt` (literate markdown tangler)
 
 \centering
 \includegraphics[width = \textwidth]{figures/lmt.png}
 
-# `pandoc`
+# `pandoc` (universal document converter)
 
 \centering
 \includegraphics[width = \textwidth]{figures/pandoc.png}
 
 # Phase B: the `speakr` package
 
-`speakr` is an `R` package to aid Praat users:
+`speakr` is an `R` package to aid Praat users (under development):
 
 - aim: tangle and run Praat scripts from within `R`
 - two main functions
@@ -141,5 +154,11 @@ vowels %>%
 
 # Phase C: dissemination
 
-- GitHub
-- Open Science Framework
+- GitHub: \url{https://github.com}
+    - versioning system `git`
+    - online repository
+- Open Science Framework: \url{https://osf.io}
+    - online repository (for data)
+
+# Summary
+
