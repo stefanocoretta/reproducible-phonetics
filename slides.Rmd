@@ -156,6 +156,10 @@ vowels %>%
 
 # Phase C: dissemination
 
+*There is no investigation without dissemination.*
+
+\begin{flushright} Ricardo Bermúdez-Otero (p.c.) \end{flushright}
+
 - `knitr` [@xie2014]
     - dynamic reports
     - reproducible documents
