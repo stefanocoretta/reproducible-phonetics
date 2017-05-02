@@ -15,7 +15,7 @@ output:
     latex_engine: xelatex
     theme: Rochester
     fig_caption: false
-bibliography: linguistics.bib
+bibliography: bibliography.bib
 biblio-style: unified.bst
 indent: true
 header-includes:
