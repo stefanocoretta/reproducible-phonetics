@@ -28,9 +28,9 @@ header-includes:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.cap="", fig.path = "figures/", fig.align = "center")
-devtools::load_all("../speakr")
 library(tidyverse)
 theme_set(theme_light())
+library(speakr)
 ```
 
 # Reproducible research
